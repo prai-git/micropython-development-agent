@@ -1,0 +1,32 @@
+{
+  "board": "NUCLEO_G0B1RE",
+  "mcu": "STM32G0B1RET6",
+  "firmware": "MicroPython v1.28.0",
+  "timestamp": "2026-05-06",
+  "results": [
+    { "module": "setup",    "status": "PASS", "attempts": 1, "notes": "pyserial installed, STM32_Programmer_CLI found in Program Files (x86)" },
+    { "module": "flash",    "status": "PASS", "attempts": 1, "notes": "290.63 KB firmware, verified OK" },
+    { "module": "repl",     "status": "PASS", "attempts": 1, "notes": "sys.platform=pyboard, freq=64MHz, filesystem OK" },
+    { "module": "gpio",     "status": "PASS", "attempts": 2, "notes": "Pin.toggle() not available, used manual toggle fallback" },
+    { "module": "uart",     "status": "PASS", "attempts": 2, "notes": "UART1-6 available. UART2 is REPL (skip in enumeration)" },
+    { "module": "spi",      "status": "PASS", "attempts": 1, "notes": "SPI2 at 1-4 MHz, write/read/full-duplex all OK" },
+    { "module": "i2c",      "status": "PASS", "attempts": 1, "notes": "I2C1 + SoftI2C OK. 0 devices (none connected)" },
+    { "module": "adc",      "status": "PASS", "attempts": 1, "notes": "PA0, PA1, internal temp, internal VREF all OK" },
+    { "module": "dac",      "status": "PASS", "attempts": 1, "notes": "pyb.DAC on PA4. DAC-ADC cross-verify monotonic" },
+    { "module": "pwm",      "status": "PASS", "attempts": 1, "notes": "machine.PWM on PA6, 1-5 kHz, duty sweep OK" },
+    { "module": "rtc",      "status": "PASS", "attempts": 1, "notes": "pyb.RTC set/read/advance verified (2s in 3s window)" },
+    { "module": "watchdog", "status": "PASS", "attempts": 1, "notes": "WDT 5s timeout, 5 feeds + 3s delay OK" },
+    { "module": "extint",   "status": "PASS", "attempts": 1, "notes": "Pin.irq on PC13, no spurious triggers" },
+    { "module": "can",      "status": "SKIP", "attempts": 1, "notes": "FDCAN hardware present but not in MicroPython build" }
+  ],
+  "phase2_results": [
+    { "module": "heartbeat-led",    "status": "PASS", "attempts": 2, "notes": "Timer(1) failed (ValueError: Timer doesn't exist). Used Timer(-1) virtual timer. LED blinks at 500ms." },
+    { "module": "button-events",    "status": "PASS", "attempts": 1, "notes": "Pin.irq on PC13 with IRQ_FALLING|IRQ_RISING. Press/release detected via UART2 VCP." },
+    { "module": "app-integration",  "status": "PASS", "attempts": 1, "notes": "Combined heartbeat + button events in main.py. Phase 1 demo backed up as main_phase1_demo.py." }
+  ],
+  "application": {
+    "description": "Heartbeat LED (PA5, 500ms blink) + Button B1 press/release events (PC13) over UART2 VCP",
+    "main_py": "scripts/g0_main.py",
+    "board_files": ["boot.py", "main.py", "main_phase1_demo.py"]
+  }
+}

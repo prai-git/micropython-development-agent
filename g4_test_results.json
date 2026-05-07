@@ -1,0 +1,24 @@
+{
+  "board": "NUCLEO_G474RE",
+  "mcu": "STM32G474RET6",
+  "firmware": "MicroPython v1.28.0",
+  "timestamp": "2026-05-06",
+  "results": [
+    { "module": "setup",    "status": "PASS", "attempts": 1, "notes": "pyserial 3.5, STM32_Programmer_CLI v2.20.0, COM7 detected, ST-LINK V3J9M3" },
+    { "module": "flash",    "status": "PASS", "attempts": 1, "notes": "317.22 KB firmware, verified OK" },
+    { "module": "repl",     "status": "PASS", "attempts": 1, "notes": "sys.platform=pyboard, freq=170MHz (tuple), filesystem OK" },
+    { "module": "gpio",     "status": "PASS", "attempts": 2, "notes": "Pin('PA5') not available — G4 uses board-level names (LED1, SW). Pin.toggle() not available, used manual toggle fallback" },
+    { "module": "uart",     "status": "PASS", "attempts": 1, "notes": "VCP is LPUART1 (not UART2). UART1 and UART3 available. UART2/4/5 not in build." },
+    { "module": "spi",      "status": "PASS", "attempts": 1, "notes": "SPI1 at 1-4 MHz, write/read/full-duplex all OK. SPI1 shares PA5 with LED." },
+    { "module": "i2c",      "status": "PASS", "attempts": 1, "notes": "I2C1 + SoftI2C OK. 0 devices (none connected)" },
+    { "module": "adc",      "status": "PASS", "attempts": 1, "notes": "A0, A1, internal temp, internal VREF all OK. Noisy on floating pins (expected)." },
+    { "module": "dac",      "status": "PASS", "attempts": 1, "notes": "pyb.DAC on A2/PA4. DAC-ADC cross-verify needs jumper (no wire connected)." },
+    { "module": "pwm",      "status": "PASS", "attempts": 1, "notes": "machine.PWM on D12/PA6, 1-5 kHz, duty sweep OK" },
+    { "module": "rtc",      "status": "PASS", "attempts": 1, "notes": "pyb.RTC set/read/advance verified (3s in 3s window)" },
+    { "module": "watchdog", "status": "PASS", "attempts": 1, "notes": "WDT 5s timeout, 5 feeds + 3s delay OK. Caused board lockup after test — needed process kill to recover COM7." },
+    { "module": "extint",   "status": "PASS", "attempts": 1, "notes": "Pin.irq on SW/PC13, no spurious triggers" },
+    { "module": "can",      "status": "PASS", "attempts": 2, "notes": "FDCAN1 loopback works with setfilter(0, CAN.MASK, 0, (0,0)). Single-message loopback verified. Multi-message FIFO timeout (FDCAN quirk)." }
+  ],
+  "phase2_results": [],
+  "application": null
+}

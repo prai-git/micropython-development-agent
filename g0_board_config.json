@@ -1,0 +1,48 @@
+{
+  "board": "NUCLEO_G0B1RE",
+  "mcu": "STM32G0B1RET6",
+  "family": "G0",
+  "core": "Cortex-M0+",
+  "clock_mhz": 64,
+  "flash_kb": 512,
+  "ram_kb": 144,
+  "package": "LQFP64",
+  "com_port": "COM6",
+  "baudrate": 115200,
+  "stlink": "on-board ST-LINK/V2-1",
+  "stlink_sn": "0671FF363947423043124749",
+  "programmer_cli": "C:/Program Files (x86)/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin/STM32_Programmer_CLI.exe",
+  "firmware": {
+    "version": "v1.28.0",
+    "file": "NUCLEO_G0B1RE-20260406-v1.28.0.hex",
+    "url": "https://micropython.org/resources/firmware/NUCLEO_G0B1RE-20260406-v1.28.0.hex"
+  },
+  "peripherals": [
+    "GPIO", "UART", "SPI", "I2C", "ADC", "DAC",
+    "PWM", "RTC", "WDT", "ExtInt", "FDCAN", "USB"
+  ],
+  "pin_map": {
+    "led": "PA5",
+    "button": "PC13",
+    "uart_num": 2,
+    "uart_tx": "PA2",
+    "uart_rx": "PA3",
+    "spi_num": 2,
+    "spi_sck": "PB13",
+    "spi_miso": "PB14",
+    "spi_mosi": "PB15",
+    "spi_nss": "PB12",
+    "i2c_num": 1,
+    "i2c_scl": "PB8",
+    "i2c_sda": "PB9",
+    "adc_pin": "PA0",
+    "adc_pin2": "PA1",
+    "dac_pin": "PA4",
+    "pwm_pin": "PA6",
+    "fdcan_num": 1,
+    "fdcan_tx": "PA12",
+    "fdcan_rx": "PA11"
+  },
+  "micropython_version": "1.28.0",
+  "filesystem_ok": true
+}
