@@ -1,4 +1,4 @@
-# ic-mp-dev
+# micropython-development-agent
 
 MicroPython development environment for STM32 Nucleo evaluation boards. Provides a prompt-driven, two-phase workflow for board bring-up and application development.
 
